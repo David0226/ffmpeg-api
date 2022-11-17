@@ -1,0 +1,5 @@
+flake8
+black
+fastapi==0.75.1
+uvicorn
+python-ffmpeg-video-streaming
