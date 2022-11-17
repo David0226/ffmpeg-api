@@ -7,3 +7,7 @@
    “crop” : “1000X1000” 		         => crop 할 영역, default = “”
 }
 
+CAMERA_ID = camera01
+CAMERA_URL = "D:\10.Source\13. Becom\Image_API\app\routers\avatar.mp4"
+FPS = 1
+SCALE = ""

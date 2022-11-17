@@ -9,27 +9,32 @@ from typing import List
 # env
 if os.environ.get("ENV") == None:
     config = dotenv_values(".env")
-    CAMERA_ID = config["CAMERA_ID"]
-    CAMERA_URL = config["CAMERA_URL"]
-    FPS = config["FPS"]
-    SCALE = config["SCALE"]
+    camera_id = config["CAMERA_ID"]
+    camera_url = config["CAMERA_URL"]
+    fps = config["FPS"]
+    scale = config["SCALE"]
 
 else:
-    CAMERA_ID = os.environ.get("CAMERA_ID")
-    CAMERA_URL = os.environ.get("CAMERA_URL")
-    FPS = os.environ.get("FPS")
-    SCALE = os.environ.get("SCALE")
+    camera_id = os.environ.get("CAMERA_ID")
+    camera_url = os.environ.get("CAMERA_URL")
+    fps = os.environ.get("FPS")
+    scale = os.environ.get("SCALE")
 
 router = APIRouter()
+
+# request Body
+class Camera(BaseModel):
+    camera_url: str
+    fps: str
+    scale: Optional[str] = None
 
 @router.get("/")
 async def read_items():
     return fake_items_db
 
 
-
-@router.get("/{CAMERA_ID}")
-async def read_item(item_id: str):
+@router.get("/{camera_id}")
+async def makeImage(item_id: str):
     if item_id not in fake_items_db:
         raise HTTPException(status_code=404, detail="Item not found")
     return {"name": fake_items_db[item_id]["name"], "item_id": item_id}
