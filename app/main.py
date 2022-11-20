@@ -10,8 +10,9 @@ import uvicorn
 app = FastAPI()
 app.include_router(videoGet_opencv.router)
 
-
-
 @app.get("/")
 async def root():
     return {"message": "Hello Bigger Applications!"}
+
+
+
