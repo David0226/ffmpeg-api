@@ -8,7 +8,6 @@ from uuid import UUID, uuid4
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
-from calc import cpu_bound_func
 
 
 class Job(BaseModel):
