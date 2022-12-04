@@ -1,0 +1,5 @@
+{
+    "Camera" : 1,
+    "detect_carriage" : "OFF",
+    "detect_rack" : "ON"
+}

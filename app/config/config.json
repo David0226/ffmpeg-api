@@ -1,0 +1,71 @@
+[
+    {
+        "Camera_ID": 1,
+        "DataSource":
+        {
+            "source_video": "../data/input/carriage_tray_1.mp4",
+            "image_size": [4000, 3000],
+            "video_fps": 30,
+            "obj_real_size": [950, 750],
+            "length_scale": 2
+        },
+        "Detection":
+        {
+            "switch_path": "../config/detect_switch.json",
+            "interval": 1
+        },
+        "DetectionModel":
+        {
+            "config": "../detect_model/mmpose_msc_higherhrnet_w48_coco_512x512_udp.py",
+            "checkpoint": "../detect_model/20221018_realdata3_e2750_best.pth",
+            "gpu_device": "cuda:0"
+        },
+        "Calculation":
+        {
+            "matrix": [[-28.0005997, 9.13020487, -47801.7842], [-45.1514711, -83.696783, 142243.156], [-0.00126370663, -0.028351383, 1.0]],
+            "base_point": [[725, 1753], [2055, 2665], [2717, 1258]]
+        },
+        "Result":
+        {
+            "path": "../data/output/camera001/",
+            "result_image": "../data/output/recent/camera001.jpg",
+            "result_log": "../data/output/recent/camera001.json"
+        }
+    },
+
+    {
+        "Camera_ID": 1,
+        "DataSource":
+        {
+            "source_video": "../data/input/carriage_tray_2.mp4",
+            "image_size": [4000, 3000],
+            "video_fps": 30,
+            "obj_real_size": [950, 750],
+            "length_scale": 2
+        },
+        "Detection":
+        {
+            "switch_path": "../config/detect_switch.json",
+            "interval": 1
+        },
+        "DetectionModel":
+        {
+            "config": "../detect_model/mmpose_msc_higherhrnet_w48_coco_512x512_udp.py",
+            "checkpoint": "../detect_model/20221018_realdata3_e2750_best.pth",
+            "gpu_device": "cuda:0"
+        },
+        "Calculation":
+        {
+            "matrix": [[-28.0005997, 9.13020487, -47801.7842], [-45.1514711, -83.696783, 142243.156], [-0.00126370663, -0.028351383, 1.0]],
+            "base_point": [[725, 1753], [2055, 2665], [2717, 1258]]
+        },
+        "Result":
+        {
+            "path": "../data/output/camera002/",
+            "result_image": "../data/output/recent/camera002.jpg",
+            "result_log": "../data/output/recent/camera002.json"
+        }
+    }
+]
+
+
